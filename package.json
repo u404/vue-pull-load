@@ -1,0 +1,39 @@
+{
+  "name": "@sc/vue-pull-load",
+  "version": "0.0.5",
+  "scripts": {
+    "lint": "vue-cli-service lint"
+  },
+  "main": "./dist/index.js",
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "bezier-easing": "^2.1.0",
+    "vue": "^2.5.17"
+  },
+  "devDependencies": {
+    "@sc/cli-plugin-babel": "latest",
+    "@sc/cli-plugin-eslint": "latest",
+    "@sc/cli-service": "latest",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0-0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "license": "ISC",
+  "maintainers": [
+    {
+      "name": "",
+      "mail": ""
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@t-gitlab.smartcinema.com.cn:node/vue-pull-load.git"
+  },
+  "publishConfig": {
+    "registry": "http://registry.smartcinema.com.cn"
+  }
+}

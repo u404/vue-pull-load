@@ -1,0 +1,61 @@
+@import "./style/mixins.scss";
+.vue-pull-load {
+  position: relative;
+}
+.pull-load-tips {
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-100%);
+  height: rem(50);
+  @include flex($jus: center);
+  &-icon {
+  }
+  &-text {
+    color: #999;
+    &::before {
+      content: "";
+    }
+  }
+  &.status-ready &-text:before {
+    content: "下拉刷新";
+  }
+  &.status-pre &-text:before {
+    content: "松开刷新";
+  }
+
+  &.status-loading &-icon {
+    margin-right: rem(10);
+    &::before {
+      content: "";
+      display: block;
+      width: rem(18);
+      height: rem(18);
+      border: 3px solid #ccc;
+      border-radius: 50%;
+      border-top: 3px solid rgba(255, 255, 255, 0);
+      animation: rotate 0.8s linear infinite;
+      box-sizing: border-box;
+    }
+  }
+
+  &.status-loading &-text::before {
+    content: "加载中...";
+  }
+  &.status-done &-text::before {
+    content: "加载完毕";
+  }
+  &.status-error &-text::before {
+    content: "加载失败";
+  }
+}

@@ -1,0 +1,22 @@
+$px-75: 75;
+
+$px-375: 37.5;
+
+@function getRem($n) {
+  @return ($n / $px-75) * 1rem;
+}
+
+@function getRem375($n) {
+  @return ($n / $px-375) * 1rem;
+}
+
+@function rem($n) {
+  @return ($n / $px-375) * 1rem;
+}
+
+@mixin flex($flow: row nowrap, $jus: space-between, $ali: center) {
+  display: flex;
+  flex-flow: $flow;
+  justify-content: $jus;
+  align-items: $ali;
+}
